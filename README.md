@@ -25,11 +25,11 @@ nginx -t 命令测试配置文件正确性时会报错的，这时就要决定�
    
 #nano /etc/nginx/nginx.conf  
   
-修改或追加下面3行配置
-
-ssl_protocols TLSv1.2 TLSv1.3;
-ssl_prefer_server_ciphers on;
-ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4";
+修改或追加下面3行配置  
+  
+ssl_protocols TLSv1.2 TLSv1.3;  
+ssl_prefer_server_ciphers on;  
+ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4";  
   
 保存并退出  
 首先要保证第3行配置是一行过，没有回车的，否则nginx -t会报告语法错误  
