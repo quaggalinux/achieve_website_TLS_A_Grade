@@ -35,7 +35,7 @@ ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA
 首先要保证第3行配置是一行过，没有回车的，否则nginx -t会报告语法错误  
 第1行的意思是只使用TLSv1.2 TLSv1.3两种协议，因为允许使用TLS 1.0及TLS 1.1协议会导致测试B Grade  
 第2行的意思是打开前向加密功能，没有打开这个功能会导致测试B Grade  
-第3行的意思是禁止使用RC4前向加密协议，因为这个协议已被证明不安全  
+第3行的意思是禁止使用RC4前向加密协议，因为这个协议不如AEAD类型的安全 
   
 检查nginx配置语法  
   
